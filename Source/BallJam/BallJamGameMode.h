@@ -13,6 +13,11 @@ class ABallJamGameMode : public AGameModeBase
 
 public:
 	ABallJamGameMode();
+
+	UFUNCTION(BlueprintPure, Category="Status")
+	bool GetLostStatus() const;
+	UFUNCTION(BlueprintCallable, Category="Modify")
+	void SetLostStatus(bool status);
 };
 
 
