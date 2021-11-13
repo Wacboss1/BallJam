@@ -7,4 +7,6 @@ ABallJamGameMode::ABallJamGameMode()
 {
 	// set default pawn class to our ball
 	DefaultPawnClass = ABallJamBall::StaticClass();
+
+	bool islost;
 }
