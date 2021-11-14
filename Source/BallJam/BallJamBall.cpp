@@ -41,8 +41,6 @@ ABallJamBall::ABallJamBall()
 	Camera->SetupAttachment(SpringArm, USpringArmComponent::SocketName);
 	Camera->bUsePawnControlRotation = false; // We don't want the controller rotating the camera
 	
-	Move = CreateDefaultSubobject<UPawnMovementComponent>(TEXT("Movement"));
-	
     // Set up forces
 	RollTorque = 50000000.0f;
 	JumpImpulse = 350000.0f;
