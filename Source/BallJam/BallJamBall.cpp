@@ -8,6 +8,7 @@
 #include "GameFramework/SpringArmComponent.h"
 #include "Engine/CollisionProfile.h"
 #include "Engine/StaticMesh.h"
+#include "GameFramework/PawnMovementComponent.h"
 
 ABallJamBall::ABallJamBall()
 {
@@ -39,8 +40,10 @@ ABallJamBall::ABallJamBall()
 	Camera = CreateDefaultSubobject<UCameraComponent>(TEXT("Camera0"));
 	Camera->SetupAttachment(SpringArm, USpringArmComponent::SocketName);
 	Camera->bUsePawnControlRotation = false; // We don't want the controller rotating the camera
-
-	// Set up forces
+	
+	Move = CreateDefaultSubobject<UPawnMovementComponent>(TEXT("Movement"));
+	
+    // Set up forces
 	RollTorque = 50000000.0f;
 	JumpImpulse = 350000.0f;
 	bCanJump = true; // Start being able to jump
@@ -97,7 +100,6 @@ void ABallJamBall::TouchStarted(ETouchIndex::Type FingerIndex, FVector Location)
 		Ball->AddImpulse(Impulse);
 		bCanJump = false;
 	}
-
 }
 
 void ABallJamBall::TouchStopped(ETouchIndex::Type FingerIndex, FVector Location)
