@@ -18,11 +18,31 @@ public:
 	bool GetLossStatus() const;
 	UFUNCTION(BlueprintCallable, Category="Modify")
 	void SetLossStatus(bool status);
-	UFUNCTION(BlueprintCallable, Category="Status")
-	void IncreaseSportsmanSlain();
-	UFUNCTION(BlueprintCallable, Category="Modify")
-	int32 GetSportsmanSlain();
 	
+	UFUNCTION(BlueprintCallable, Category="Modify")
+	void IncreaseSportsmanSlain();
+	UFUNCTION(BlueprintCallable, Category="Status")
+	int32 GetSportsmanSlain();
+
+	UFUNCTION(BlueprintCallable, Category="Status")
+	int32 GetMaxSportsman();
+
+	UFUNCTION(BlueprintCallable, Category="Status")
+	int32 GetCurrentSportsman();
+	UFUNCTION(BlueprintCallable, Category="Status")
+	int32 GetRedSportsman();
+	UFUNCTION(BlueprintCallable, Category="Status")
+	int32 GetBlueSportsman();
+	
+	UFUNCTION(BlueprintCallable, Category="Modify")
+	void AddBlueSportsman();
+	UFUNCTION(BlueprintCallable, Category="Modify")
+	void AddRedSportsman();
+
+	UFUNCTION(BlueprintCallable, Category="Modify")
+	void RemoveBlueSportsman();
+	UFUNCTION(BlueprintCallable, Category="Modify")
+	void RemoveRedSportsman();
 };
 
 

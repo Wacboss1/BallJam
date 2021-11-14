@@ -18,7 +18,13 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	bool isLoss;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	int32 remainingSportsman;
+	int32 maxSportsman;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 redSportsman;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 blueSportsman;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int32 sportsmanSlain;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 kickStrength;
 };
