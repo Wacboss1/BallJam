@@ -15,9 +15,14 @@ public:
 	ABallJamGameMode();
 
 	UFUNCTION(BlueprintPure, Category="Status")
-	bool GetLostStatus() const;
+	bool GetLossStatus() const;
 	UFUNCTION(BlueprintCallable, Category="Modify")
-	void SetLostStatus(bool status);
+	void SetLossStatus(bool status);
+	UFUNCTION(BlueprintCallable, Category="Status")
+	void IncreaseSportsmanSlain();
+	UFUNCTION(BlueprintCallable, Category="Modify")
+	int32 GetSportsmanSlain();
+	
 };
 
 

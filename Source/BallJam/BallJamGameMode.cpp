@@ -11,12 +11,22 @@ ABallJamGameMode::ABallJamGameMode()
 	GameStateClass = ABallJamGameState::StaticClass();
 }
 
-bool ABallJamGameMode::GetLostStatus() const
+bool ABallJamGameMode::GetLossStatus() const
 {
-	return GetGameState<ABallJamGameState>()->isLost;
+	return GetGameState<ABallJamGameState>()->isLoss;
 }
 
-void ABallJamGameMode::SetLostStatus(bool status)
+void ABallJamGameMode::SetLossStatus(bool status)
 {
-	GetGameState<ABallJamGameState>()->isLost = status;
+	GetGameState<ABallJamGameState>()->isLoss = status;
+}
+
+void ABallJamGameMode::IncreaseSportsmanSlain()
+{
+	GetGameState<ABallJamGameState>()->sportsmanSlain++;
+}
+
+int32 ABallJamGameMode::GetSportsmanSlain()
+{
+	return GetGameState<ABallJamGameState>()->sportsmanSlain;
 }

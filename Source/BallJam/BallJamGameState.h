@@ -16,7 +16,9 @@ class BALLJAM_API ABallJamGameState : public AGameStateBase
 public:
 	ABallJamGameState();
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	bool isLost;
+	bool isLoss;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int32 remainingSportsman;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 sportsmanSlain;
 };

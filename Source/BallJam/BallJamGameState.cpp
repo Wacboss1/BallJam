@@ -4,6 +4,6 @@
 #include "BallJamGameState.h"
 
 ABallJamGameState::ABallJamGameState():
-	isLost(false)
+	isLoss(false), sportsmanSlain(0)
 {
 }
