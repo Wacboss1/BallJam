@@ -4,6 +4,8 @@
 #include "BallJamGameState.h"
 
 ABallJamGameState::ABallJamGameState():
-	isLoss(false), maxSportsman(6), redSportsman(0), blueSportsman(0), sportsmanSlain(0), kickStrength(800)
+	isLoss(false), maxSportsman(6), redSportsman(0),
+	blueSportsman(0), sportsmanSlain(0), highScore(0),
+	kickStrength(800)
 {
 }

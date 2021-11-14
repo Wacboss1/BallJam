@@ -18,7 +18,14 @@ public:
 	bool GetLossStatus() const;
 	UFUNCTION(BlueprintCallable, Category="Modify")
 	void SetLossStatus(bool status);
-	
+
+	UFUNCTION(BlueprintCallable, Category="Modify")
+	void UpdateHighScore(int32 newScore);
+	UFUNCTION(BlueprintCallable, Category="Status")
+	int32 GetHighScore();
+
+	UFUNCTION(BlueprintCallable, Category="Modify")
+	void ResetSportsmanSlain();
 	UFUNCTION(BlueprintCallable, Category="Modify")
 	void IncreaseSportsmanSlain();
 	UFUNCTION(BlueprintCallable, Category="Status")

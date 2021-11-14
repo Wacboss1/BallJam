@@ -13,6 +13,7 @@ UCLASS()
 class BALLJAM_API ABallJamGameState : public AGameStateBase
 {
 	GENERATED_BODY()
+	
 public:
 	ABallJamGameState();
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
@@ -25,6 +26,8 @@ public:
 	int32 blueSportsman;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int32 sportsmanSlain;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 highScore;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int32 kickStrength;
 };

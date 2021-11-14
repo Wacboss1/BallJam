@@ -21,6 +21,21 @@ void ABallJamGameMode::SetLossStatus(bool status)
 	GetGameState<ABallJamGameState>()->isLoss = status;
 }
 
+void ABallJamGameMode::UpdateHighScore(int32 newScore)
+{
+	GetGameState<ABallJamGameState>()->highScore = newScore;
+}
+
+int32 ABallJamGameMode::GetHighScore()
+{
+	return GetGameState<ABallJamGameState>()->highScore;
+}
+
+void ABallJamGameMode::ResetSportsmanSlain()
+{
+	GetGameState<ABallJamGameState>()->sportsmanSlain = 0;
+}
+
 void ABallJamGameMode::IncreaseSportsmanSlain()
 {
 	GetGameState<ABallJamGameState>()->sportsmanSlain++;
